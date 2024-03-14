@@ -13,10 +13,11 @@
         window.open("https://www.youthbuzz.in/webar1", '_blank');
         });
         previewButton.addEventListener('click', () => {
+        webButton.setAttribute("visible", true);
         previewButton.setAttribute("visible", false);
         document.querySelector("#paintandquest-video-link").setAttribute("src", "#paintandquest-video-mp4");
         document.querySelector("#paintandquest-video-mp4").play();
-         webButton.setAttribute("visible", true);
+        
 	});
 
            exampleTarget.addEventListener("targetFound", event => {
