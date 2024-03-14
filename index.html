@@ -7,10 +7,10 @@
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
     <script>
       window.onload=function(){
-        const webButton = document.querySelector("#learn");
+        const webButton = document.querySelector("#learn").setAttribute("visible",false);
         const previewButton = document.querySelector("#paintandquest-preview-button");
         const exampleTarget = document.querySelector('#mytarget');
-         
+        
            exampleTarget.addEventListener("targetFound", event => {
 	         console.log("target found");
                   
@@ -21,16 +21,18 @@
 		  document.querySelector("#paintandquest-video-mp4").pause();     
                   document.querySelector("#paintandquest-video-mp4").currentTime = 0;
 		  previewButton.setAttribute("visible", true);
+                  webButton.setAttribute("visible",false);
 	       }); 
       };
-     //function videoplay(){
   
+	    function playvideo(){
+           const webButton = document.querySelector("#learn").setAttribute("visible",true);
     //    const previewButton = document.querySelector("#paintandquest-preview-button");
-      
     //    previewButton.setAttribute("visible", false);
     //    document.querySelector("#paintandquest-video-link").setAttribute("src", "#paintandquest-video-mp4");
     //    document.querySelector("#paintandquest-video-mp4").play();
     // }
+	    }
 
     function webpage()
     {
@@ -54,10 +56,10 @@
     
        <a-entity id="mytarget" mytarget mindar-image-target="targetIndex:0">
          <a-video id="paintandquest-video-link" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
-          <a-image id="paintandquest-preview-button" src="#paintandquest-preview" alpha-test="0.5" width="0.2" height="0.2" position="0 0 0.1">
+          <a-image id="paintandquest-preview-button"  class="clickable" onclick="playvideo()" src="#paintandquest-preview" alpha-test="0.5" width="0.2" height="0.2" position="0 0 0.1">
           <a-image  id="learn" class="clickable" onclick="webpage()" src="#web-icon" position="0 -0.38 0" height="0.15" width="0.4">
        
-      </a-entity>
+      </a-entity>z
     </a-scene>
   </body>
 </html>
