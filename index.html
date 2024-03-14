@@ -10,10 +10,7 @@
         const webButton = document.querySelector("#web");
         const previewButton = document.querySelector("#paintandquest-preview-button");
         const exampleTarget = document.querySelector('#mytarget');
-        webButton.addEventListener('click',  () => {
-        console.log("btnclick");
-        window.open("https://www.youthbuzz.in/webar1", '_blank');
-        });
+        
         previewButton.addEventListener('click', () => {
 	console.log("videoPlay");
         webButton.setAttribute("visible", true);
@@ -22,6 +19,11 @@
         document.querySelector("#paintandquest-video-mp4").play();
         
 	});
+        
+       webButton.addEventListener('click',  () => {
+        console.log("btnclick");
+        window.open("https://www.youthbuzz.in/webar1", '_blank');
+        });
 
            exampleTarget.addEventListener("targetFound", event => {
 	         console.log("target found");
