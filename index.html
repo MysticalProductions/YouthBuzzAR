@@ -10,11 +10,11 @@
         const webButton = document.querySelector("#web");
         const previewButton = document.querySelector("#paintandquest-preview-button");
         const exampleTarget = document.querySelector('#mytarget');
-        webButton.addEventListener('click', function (evt) {
+        webButton.addEventListener('click',  () => {
         console.log("btnclick");
         window.open("https://www.youthbuzz.in/webar1", '_blank');
         });
-        previewButton.addEventListener('click',function (evt) {
+        previewButton.addEventListener('click', () => {
 	console.log("videoPlay");
         webButton.setAttribute("visible", true);
         previewButton.setAttribute("visible", false);
