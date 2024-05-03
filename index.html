@@ -13,7 +13,7 @@
         
            exampleTarget.addEventListener("targetFound", event => {
 	         console.log("target found");
-                  webButton.setAttribute("visible",true);
+                  webButton.setAttribute("visible",false);
 	          });
 	        exampleTarget.addEventListener("targetLost", event => {
 	         console.log("target lost");
@@ -27,7 +27,7 @@
   
 	    function playvideo()
 	   {
-	           const webButton = document.querySelector("#learn").setAttribute("visible",true);
+	           const webButton = document.querySelector("#learn").setAttribute("visible",false);
                     console.log("webtton");
 	           const previewButton = document.querySelector("#paintandquest-preview-button").setAttribute("visible", false);
 		   console.log("previewbtton");
