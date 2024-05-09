@@ -13,7 +13,7 @@
         
            exampleTarget.addEventListener("targetFound", event => {
 	         console.log("target found");
-                 webButton.disabled = true;
+                 webButton.setAttribute("visible", false);
 	          });
 	        exampleTarget.addEventListener("targetLost", event => {
 	         console.log("target lost");
@@ -21,7 +21,6 @@
 		  document.querySelector("#paintandquest-video-mp4").pause();     
                   document.querySelector("#paintandquest-video-mp4").currentTime = 0;
 		  previewButton.setAttribute("visible", true);
-                  
 	       }); 
       };
   
@@ -29,7 +28,7 @@
 	   {
                 document.querySelector("#paintandquest-video-mp4").play();
 		document.querySelector("#paintandquest-preview-button").setAttribute("visible", false);
-                document.querySelector("#learn").class = "clickable";
+                //document.querySelector("#learn").class = "clickable";
 	    }
 
   /*  function webpage()
