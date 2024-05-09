@@ -24,9 +24,10 @@
 	       }); 
 
            previewButton.addEventListener('click', () => {
+	       webButton.setAttribute("visible",true);
               previewButton.setAttribute("visible", false);
               document.querySelector("#paintandquest-video-mp4").play();
-	      webButton.setAttribute("visible",true);
+	      //webButton.setAttribute("visible",true);
       });
 
 	webButton.addEventListner('click',() => {
