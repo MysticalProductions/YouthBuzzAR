@@ -27,17 +27,19 @@
 	    function playvideo()
 	   {
                 document.querySelector("#paintandquest-video-mp4").play();
-		document.querySelector("#paintandquest-preview-button").style.display = "none";
-                document.querySelector("#learn").class = "clickable";
-		document.querySelector("#learn").setAttribute("visible", true);
+		document.querySelector("#paintandquest-preview-button").setAttribute("visible", true);
+                webpage();
 	    }
 
-  /*  function webpage()
-    {
-	    document.querySelector("#paintandquest-video-mp4").pause();     
-	    document.querySelector("#paintandquest-video-mp4").currentTime = 0;
-	    window.open("https://www.youthbuzz.in/webar1", '_blank');
-    }*/
+   function webpage()
+    {       
+	     const webButton = document.querySelector("#learn");
+	     webButton.setAttribute("visible",true);
+	    //document.querySelector("#paintandquest-video-mp4").pause();     
+	   // document.querySelector("#paintandquest-video-mp4").currentTime = 0;
+            
+	    //window.open("https://www.youthbuzz.in/webar1", '_blank');
+    }
     </script>
 	  <style>
 		  .hidden {
