@@ -24,11 +24,14 @@
 	       }); 
 
            previewButton.addEventListener('click', () => {
-	       webButton.setAttribute("visible",true);
+	      
               previewButton.setAttribute("visible", true);
               document.querySelector("#paintandquest-video-mp4").play();
-	      //webButton.setAttribute("visible",true);
+	      setTimeout();
       });
+         setTimeout(() => {
+          webButton.setAttribute("visible", true);
+        }, 300); 
 
 	webButton.addEventListner('click',() => {
 	window.open("https://www.youthbuzz.in/webar1", '_blank');
