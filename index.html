@@ -27,7 +27,7 @@
 	    function playvideo()
 	   {
                 document.querySelector("#paintandquest-video-mp4").play();
-		document.querySelector("#paintandquest-preview-button").css('visibility','hidden');
+		document.querySelector("#paintandquest-preview-button").classList.add('hidden');
                 document.querySelector("#learn").class = "clickable";
 		document.querySelector("#learn").setAttribute("visible", true);
 	    }
@@ -39,6 +39,11 @@
 	    window.open("https://www.youthbuzz.in/webar1", '_blank');
     }*/
     </script>
+	  <style>
+		  .hidden {
+	              display: none;
+                          }
+	  </style>
   </head>
   <body>
     <a-scene videohandler mindar-image="imageTargetSrc: ./targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
