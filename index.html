@@ -25,17 +25,18 @@
 
            previewButton.addEventListener('click', () => {
 	      
-             previewButton.hidden = true;
+            previewButton.setAttribute("visible", false);
               document.querySelector("#paintandquest-video-mp4").play();
 	       setTimeout(() => {
           webButton.setAttribute("visible", true);
         }, 400); 
       });
-        
-	webButton.addEventListner('click',() => {
-	window.open("https://www.youthbuzz.in/webar1", '_blank');
-	});
     };
+function web()
+	{
+		window.open("https://www.youthbuzz.in/webar1", '_blank');
+	}
+	    
   
       </script>
   </head>
