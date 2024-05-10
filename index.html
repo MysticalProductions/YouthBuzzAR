@@ -21,7 +21,7 @@
 		  document.querySelector("#paintandquest-video-mp4").pause();     
                   document.querySelector("#paintandquest-video-mp4").currentTime = 0;
 		  previewButton.setAttribute("visible", true);
-                  webButton.setAttribute("visible", false);
+                  document.querySelector("#learn").style.display = "hide";
 	       }); 
 
            previewButton.addEventListener('click', () => {
@@ -29,7 +29,7 @@
             previewButton.setAttribute("visible", false);
               document.querySelector("#paintandquest-video-mp4").play();
 	       setTimeout(() => {
-          webButton.setAttribute("visible", true);
+          document.querySelector("#learn").style.display = "block";
         }, 400); 
       });
     };
