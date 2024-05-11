@@ -26,13 +26,9 @@
 
            previewButton.addEventListener('click', () => {
 	      
-            previewButton.setAttribute("visible", false);
+              previewButton.style.display = "none";
               document.querySelector("#paintandquest-video-mp4").play();
-	       setTimeout(() => {
-          	
-		document.querySelector("#learn").style.display = "inline";
-		
-        }, 400); 
+	      document.querySelector("#learn").style.display = "inline";
       });
     };
 function web()
