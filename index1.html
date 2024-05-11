@@ -17,6 +17,9 @@
 
       previewButton.addEventListener('click', () => {
         previewButton.setAttribute("visible", false);
+
+        // Ensure video restarts even on click
+        videoElement.currentTime = 0; // Seek to the beginning
         videoElement.play();
 
         // Schedule learn button visibility with 10 seconds delay
