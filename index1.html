@@ -14,18 +14,11 @@
 
       // Keep video paused initially
       videoElement.pause();
-      let videoPlayedOnce = false; // Flag to track if video has played
 
       previewButton.addEventListener('click', () => {
         previewButton.setAttribute("visible", false);
         videoElement.play();
-      });
-
-      videoElement.addEventListener('ended', () => {
-        if (!videoPlayedOnce) {
-          videoPlayedOnce = true;
-          learnButton.setAttribute("visible", true);
-        }
+        learnButton.setAttribute("visible", true);
       });
 
       learnButton.addEventListener('click', () => {
@@ -40,7 +33,6 @@
         videoElement.pause();
         previewButton.setAttribute("visible", true);
         learnButton.setAttribute("visible", false);
-        videoPlayedOnce = false; // Reset video played flag
       });
     };
   </script>
