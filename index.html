@@ -29,10 +29,9 @@
             previewButton.setAttribute("visible", false);
               document.querySelector("#paintandquest-video-mp4").play();
 	       setTimeout(() => {
-          	console.log("Before style change:", document.querySelector("#learn").style.display);
-		document.querySelector("#learn").style.display = "block !important";
-		console.log("After style change:", document.querySelector("#learn").style.display);
-
+          	
+		document.querySelector("#learn").style.display = "inline";
+		
         }, 400); 
       });
     };
