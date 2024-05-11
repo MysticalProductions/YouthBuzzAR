@@ -24,7 +24,15 @@
       learnButton.addEventListener('click', () => {
         videoElement.pause();
         previewButton.setAttribute("visible", true);
+        learnButton.setAttribute("visible", false);
         window.open("https://www.youthbuzz.in/webar1", '_blank');
+      });
+
+      targetEntity.addEventListener("targetLost", event => {
+        console.log("target lost");
+        videoElement.pause();
+        previewButton.setAttribute("visible", true);
+        learnButton.setAttribute("visible", false);
       });
     };
   </script>
