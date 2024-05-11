@@ -15,6 +15,7 @@
          document.querySelector("#paintandquest-video-mp4").pause();
            exampleTarget.addEventListener("targetFound", event => {
 	         console.log("target found");
+		 previewDiv.style.display = "block";
                  document.querySelector("#paintandquest-video-mp4").pause();
 	          });
 	        exampleTarget.addEventListener("targetLost", event => {
