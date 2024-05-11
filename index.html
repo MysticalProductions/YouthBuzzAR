@@ -7,9 +7,11 @@
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
     <script>
       window.onload=function(){
-        const webButton = document.querySelector("#learn");
+        const webButton = document.querySelector("#btndiv");
+        const previewDiv = dpcument.querySelector("#playdiv);
         const previewButton = document.querySelector("#paintandquest-preview-button");
         const exampleTarget = document.querySelector('#mytarget');
+        
          document.querySelector("#paintandquest-video-mp4").pause();
            exampleTarget.addEventListener("targetFound", event => {
 	         console.log("target found");
@@ -21,14 +23,14 @@
 		  document.querySelector("#paintandquest-video-mp4").pause();     
                   document.querySelector("#paintandquest-video-mp4").currentTime = 0;
 		  previewButton.setAttribute("visible", true);
-                  document.querySelector("#learn").style.display = "none";
+                  webButton.style.display = "none";
 	       }); 
 
            previewButton.addEventListener('click', () => {
 	      
-              previewButton.style.display = "none";
+              previewDiv.style.display = "none";
               document.querySelector("#paintandquest-video-mp4").play();
-	      document.querySelector("#learn").style.display = "inline";
+	      webButton.style.display = "inline";
       });
     };
 function web()
@@ -54,8 +56,8 @@ function web()
     
        <a-entity id="mytarget" mytarget mindar-image-target="targetIndex:0">
          <a-video id="paintandquest-video-link" src = "#paintandquest-video-mp4" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
-          <a-image  id="paintandquest-preview-button"  class="clickable" src="#paintandquest-preview" alpha-test="0" width="0.2" height="0.2" position="0 0 0.1"></a-image>
-         <a-image visible ="false" id="learn" class ="clickable" onclick = "web()" src="#web-icon" position="0 -0.38 0" height="0.15" width="0.4"></a-image>
+         <div id = "playdiv">  <a-image  id="paintandquest-preview-button"  class="clickable" src="#paintandquest-preview" alpha-test="0" width="0.2" height="0.2" position="0 0 0.1"></a-image></div>
+         <div id = "btndiv">  <a-image visible ="false" id="learn" class ="clickable" onclick = "web()" src="#web-icon" position="0 -0.38 0" height="0.15" width="0.4"></a-image></div>
         
       </a-entity>
     </a-scene>
