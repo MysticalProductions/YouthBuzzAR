@@ -7,15 +7,14 @@
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
     <script>
       window.onload=function(){
-        const webButton = document.querySelector("#btndiv");
-        const previewDiv = document.querySelector("#playdiv");
+       
         const previewButton = document.querySelector("#paintandquest-preview-button");
         const exampleTarget = document.querySelector('#mytarget');
         
          document.querySelector("#paintandquest-video-mp4").pause();
            exampleTarget.addEventListener("targetFound", event => {
 	         console.log("target found");
-		 previewDiv.setAttribute("visible", true);
+		
                  document.querySelector("#paintandquest-video-mp4").pause();
 	          });
 	        exampleTarget.addEventListener("targetLost", event => {
@@ -29,7 +28,7 @@
 
            previewButton.addEventListener('click', () => {
 	      
-              previewDiv.style.display = "none";
+              previewButton.style.display = "none";
               document.querySelector("#paintandquest-video-mp4").play();
 	      webButton.style.display = "inline";
       });
