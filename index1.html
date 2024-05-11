@@ -12,11 +12,8 @@
       const learnButton = document.querySelector("#learn-button");
       const targetEntity = document.querySelector('#mytarget');
 
-      // Pause video on target lost (remove redundant call)
-      targetEntity.addEventListener("targetLost", event => {
-        console.log("target lost");
-        videoElement.pause();
-      });
+      // Keep video paused initially
+      videoElement.pause();
 
       previewButton.addEventListener('click', () => {
         previewButton.setAttribute("visible", false);
