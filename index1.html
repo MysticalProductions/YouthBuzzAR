@@ -24,8 +24,8 @@
         videoElement.currentTime = 0;
         videoElement.play();
 
-        // Clear existing timer (if any)
-        clearTimeout(learnButtonTimer);
+        // Clear existing timer directly
+        clearTimeout(setTimeout(() => {}, 0)); // Empty setTimeout to clear timer
 
         isTargetVisible = true; // Mark target as visible
 
@@ -51,8 +51,8 @@
         learnButton.setAttribute("visible", false);
         isTargetVisible = false; // Mark target as lost
 
-        // Clear existing timer
-        clearTimeout(learnButtonTimer);
+        // Clear existing timer directly
+        clearTimeout(setTimeout(() => {}, 0)); // Empty setTimeout to clear timer
       });
 
       targetEntity.addEventListener("targetFound", event => {
@@ -60,8 +60,8 @@
         if (!isTargetVisible) { // Only if target was previously lost
           isTargetVisible = true; // Mark target as visible
 
-          // Clear existing timer (if any)
-          clearTimeout(learnButtonTimer);
+          // Clear existing timer directly
+          clearTimeout(setTimeout(() => {}, 0)); // Empty setTimeout to clear timer
 
           // Schedule learn button visibility with 10 seconds delay
           const learnButtonTimer = setTimeout(() => {
